@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Texts -->
+    <style name="TextHeader">
+        <item name="android:textColor">@color/color_primary</item>
+        <item name="android:textSize">@dimen/default_text_med</item>
+    </style>
+
+    <style name="TextCategoryLabel">
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textSize">@dimen/default_tex_min</item>
+    </style>
+
+
+
+    <!-- End Texts styles -->
+</resources>

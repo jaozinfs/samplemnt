@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Olá kleiton,"
-            android:textColor="@color/toolbar_home"
+            android:textColor="@color/color_primary"
             android:layout_marginTop="@dimen/default_margin_min"
             android:textSize="24sp"
             android:textStyle="bold"

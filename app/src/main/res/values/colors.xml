@@ -8,7 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="gray">#656565</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="toolbar_home">#0c3270</color>
+    <color name="color_primary">#0c3270</color>
     <color name="phrase_ocupation_today">#A6A8AB</color>
     <color name="name_ocupation">#A6A8AB</color>
 </resources>
