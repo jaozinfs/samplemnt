@@ -11,6 +11,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <br.com.sodep.minetrackrwrk.toolkit.customview.statusbar.StatusBarView
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
         <br.com.sodep.minetrackrwrk.toolkit.customview.ToolbarCustomView
             android:id="@+id/toolbar"
@@ -73,6 +79,7 @@
             app:layout_constraintTop_toBottomOf="@+id/phrase_ocupation_today"
             tools:listitem="@layout/adapter_list_ocupation"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
