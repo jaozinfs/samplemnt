@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <br.com.sodep.minetrackrwrk.toolkit.customview.ToolbarCustomView
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:leftIcon="@drawable/ic_menu_home"
+            app:rightIcon="@drawable/ic_email" />
+
+        <br.com.sodep.minetrackrwrk.toolkit.customview.CircleCustomView
+            android:id="@+id/circle_home"
+            android:layout_width="105dp"
+            android:layout_height="125dp"
+            app:firstChartName="K"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintEnd_toEndOf="@+id/toolbar"
+            app:layout_constraintStart_toStartOf="@+id/toolbar"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <TextView
+            android:id="@+id/welcome_name_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Olá kleiton,"
+            android:textColor="@color/toolbar_home"
+            android:layout_marginTop="@dimen/default_margin_min"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/circle_home"/>
+
+        <TextView
+            android:id="@+id/phrase_ocupation_today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="O que você gostaria de fazer hoje?"
+            android:textColor="@color/phrase_ocupation_today"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcome_name_user"
+            android:layout_marginTop="4dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_list_occupation"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/default_margin_min"
+            android:layout_marginStart="@dimen/default_margin_min"
+            android:layout_marginEnd="@dimen/default_margin_min"
+            tools:itemCount="8"
+            android:scrollbars="none"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phrase_ocupation_today"
+            tools:listitem="@layout/adapter_list_ocupation"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true">
+            <include layout="@layout/fragment_drawer_routine"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>
