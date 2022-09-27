@@ -7,6 +7,8 @@ object AndroidDependency {
 
     const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${AndroidVersions.navigationComponent}"
     const val navigationKtx = "androidx.navigation:navigation-ui-ktx:${AndroidVersions.navigationComponent}"
+    // Koin Core features
+    const val koin = "io.insert-koin:koin-core:${KoinVersions.koin_version}"
 }
 
 object ComposeDependencies {
@@ -43,7 +45,8 @@ val androidDependencies = listOf(
     AndroidDependency.material,
     AndroidDependency.constraintLayout,
     AndroidDependency.navigationFragment,
-    AndroidDependency.navigationKtx
+    AndroidDependency.navigationKtx,
+    AndroidDependency.koin
 ) + ComposeDependencies.all
 
 
